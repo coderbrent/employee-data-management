@@ -15,14 +15,17 @@ var employeeStartDate;
 var employeeMonthlyRate;
 var totalBilled;
 
-var database = firebase.database();
+var dataRef = firebase.database();
 
 
 $(".submit").on("click", function() {
     employeeName = $("data-name").val().trim();
+    employeeRole = $("data-role").val().trim();
+    employeeStartDate = $("data-start-date").val().trim();
+    employeeMonthlyRate = $("data-monthly-rate").val().trim();
     $("<tr>").appendTo("#employee-view");
 
-    database.ref().push({
+    dataRef.ref().push({
         empName: employeeName,
         empRole: employeeRole,
         empStart: employeeStartDate,
