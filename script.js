@@ -19,10 +19,10 @@ var dataRef = firebase.database();
 
 
 $(".submit").on("click", function() {
-    employeeName = $("data-name").val().trim();
-    employeeRole = $("data-role").val().trim();
-    employeeStartDate = $("data-start-date").val().trim();
-    employeeMonthlyRate = $("data-monthly-rate").val().trim();
+    employeeName = $("#data-name").val().trim();
+    employeeRole = $("#data-role").val().trim();
+    employeeStartDate = $("#data-start-date").val().trim();
+    employeeMonthlyRate = $("#data-monthly-rate").val().trim();
     $("<tr>").appendTo("#employee-view");
 
     dataRef.ref().push({
