@@ -4,7 +4,9 @@
   crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
   crossorigin="anonymous">
+<link href="assets/reset.css" rel="stylesheet">
 <link href="assets/style.css" rel="stylesheet">
+
 <head>
   <meta charset="utf-8">
   <title>Employee Table</title>
@@ -16,30 +18,34 @@
       <p class="lead">A Comprehensive Directory of Employee Billable Hours</p>
     </div>
   </div>
-  <table class="table">
-    <thead><h4>Current Employees</h4>
-      <tr>
-        <th scope="col">Employee Name</th>
-        <th scope="col">Role</th>
-        <th scope="col">Start Date</th>
-        <th scope="col">Months Worked</th>
-        <th scope="col">Monthly Rate ($)</th>
-        <th scope="col">Total Billed ($)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td scope="row">Mark</td>
-        <td>CEO</td>
-        <td>11/11/2011</td>
-        <td>88</td>
-        <td>100000</td>
-        <td>8800000</td>
-      </tr>
-    </tbody>
-  </table>
+  <h4>Current Employees</h4>
+  <div class="container" id="table">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Employee Name</th>
+          <th scope="col">Role</th>
+          <th scope="col">Start Date</th>
+          <th scope="col">Months Worked</th>
+          <th scope="col">Monthly Rate ($)</th>
+          <th scope="col">Total Billed ($)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row">Mark</td>
+          <td>CEO</td>
+          <td>11/11/2011</td>
+          <td>88</td>
+          <td>100000</td>
+          <td>8800000</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<h4 id="searchParameters">Add Employee</h4>
+<div class="container" id="form">
   <form>
-    <h4 id="searchParameters">Add Employee</h4>
     <div class="form-group">
       <label for="searchTerms">Employee Name:</label>
       <input type="search" class="form-control" id="data-name" aria-describedby="search" placeholder="Jane Doe">
@@ -57,8 +63,8 @@
       <input type="records" class="form-control" id="data-monthly-rate" placeholder="200000">
     </div>
     <button type="submit" class=" submit btn btn-secondary">Submit</button>
-    <button type="clearResults" class="clear btn btn-secondary">Clear Results</button>
   </form>
+</div>
   <script src="https://code.jquery.com/jquery.js"></script>
   <script type="text/javascript" src="script.js"></script>
 </body>
